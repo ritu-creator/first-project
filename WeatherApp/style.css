@@ -60,6 +60,7 @@ body{
     font-size: 30px;
     font-weight: 400;
     margin-top: 10px;
+    font-style:small-caps;
 }
 .details{
     display: flex;
