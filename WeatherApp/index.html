@@ -37,14 +37,19 @@
 
 <script>
 
-const apiKey = "863242cfb2b1d357e6093d9a4df19a4b";
-const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metrics&q=bangalore";
+const apiKey = "34a5966ed1df0969e2e012fea8f8c82f";
+const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=bangalore";
 
 async function checkWeather(){
     const response = await fetch(apiUrl + `&appid=${apiKey}`);
-    var data = await response. json();
+    var data = await response.json();
 
     console.log(data);
+
+    document.querySelector(".city").innerHTML = data.name;
+    document.querySelector(".temp").innerHTML = data.main.temp + "°C";
+    document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
+    document.querySelector(".wind").innerHTML = data.wind.speed + " km/h";
 }
 
 
