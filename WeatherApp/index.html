@@ -81,10 +81,25 @@ async function checkWeather(city){
         weatherIcon.src = "images/snow.png";
     }
     else if(data.weather[0].main == "Thunderstorms"){
-        weatherIcon.src = "images/mist.png";
+        weatherIcon.src = "images/thunderstorm.png";
     }
     else if(data.weather[0].main == "Drizzle"){
         weatherIcon.src = "images/drizzle-night.png";
+    }
+    else if(data.weather[0].main == "Storm"){
+        weatherIcon.src = "images/storm (1).png";
+    }
+    else if(data.weather[0].main == "Cloudy night"){
+        weatherIcon.src = "images/partly-cloudy-night.png";
+    }
+    else if(data.weather[0].main == "Rainbow"){
+        weatherIcon.src = "images/rainbow.png";
+    }
+    else if(data.weather[0].main == "Clear night"){
+        weatherIcon.src = "images/moon.png";
+    }
+    else if(data.weather[0].main == "Snowflake"){
+        weatherIcon.src = "images/snowflake.png";
     }
 
     document.querySelector(".weather").style.display = "block";
